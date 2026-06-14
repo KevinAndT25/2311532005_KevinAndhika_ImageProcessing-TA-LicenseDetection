@@ -1,10 +1,14 @@
 from ultralytics import YOLO
+import streamlit as st
 import time
-import numpy as np
 
 MODEL_PATH = "best.pt"
 
-model = YOLO(MODEL_PATH)
+@st.cache_resource
+def load_model():
+    return YOLO(MODEL_PATH)
+
+model = load_model()
 
 def predict_image(image):
 
@@ -16,9 +20,7 @@ def predict_image(image):
         verbose=False
     )
 
-    end_time = time.time()
-
-    inference_time = end_time - start_time
+    inference_time = time.time() - start_time
 
     result = results[0]
 
