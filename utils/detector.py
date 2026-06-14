@@ -42,14 +42,3 @@ def predict_image(image):
         "detections": detections,
         "inference_time": inference_time
     }
-
-# import cv2
-
-# def predict_image(image):
-#     return {
-#         "original": image,
-#         "detected": image,
-#         "confidence": 1.0,
-#         "detections": 0,
-#         "inference_time": 0
-#     }
