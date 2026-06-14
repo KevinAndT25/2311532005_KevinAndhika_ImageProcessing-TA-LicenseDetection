@@ -1,13 +1,13 @@
-import pkg_resources
-import streamlit as st
-
-st.write("Installed OpenCV packages:")
-
-for p in pkg_resources.working_set:
-    if "opencv" in p.project_name.lower():
-        st.write(f"{p.project_name} == {p.version}")
-        
+# import pkg_resources
 # import streamlit as st
+
+# st.write("Installed OpenCV packages:")
+
+# for p in pkg_resources.working_set:
+#     if "opencv" in p.project_name.lower():
+#         st.write(f"{p.project_name} == {p.version}")
+        
+import streamlit as st
 
 st.set_page_config(
     page_title="License Plate Detection",
